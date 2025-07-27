@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress - TalkEase</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/progress.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-language"></i> TalkEase</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="chat.html"><i class="fas fa-comment-dots"></i> Chatbot</a></li>
+                    <li><a href="lesson.html"><i class="fas fa-book"></i> Lesson Generator</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                    <li><a href="progress.html" class="active"><i class="fas fa-trophy"></i> Progress</a></li>
+                    <li><a href="login.html" id="login-nav"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="progress" class="section active">
+            <h2><i class="fas fa-trophy"></i> Your Learning Progress</h2>
+            
+            <div class="progress-container">
+                <div class="stats-cards">
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-comment-dots"></i>
+                        </div>
+                        <div class="stats-info">
+                            <h3>Chat Sessions</h3>
+                            <p class="stats-value">12</p>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stats-info">
+                            <h3>Lessons Completed</h3>
+                            <p class="stats-value">8</p>
+                        </div>
+                    </div>
+                    <div class="stats-card">
+                        <div class="stats-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <div class="stats-info">
+                            <h3>Learning Streak</h3>
+                            <p class="stats-value">5 days</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="badges-section">
+                    <h3><i class="fas fa-medal"></i> Your Badges</h3>
+                    <div class="badges-container">
+                        <div class="badge">
+                            <div class="badge-icon active">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <p>3-Day Streak</p>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon active">
+                                <i class="fas fa-comment"></i>
+                            </div>
+                            <p>10 Chats</p>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon active">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <p>5 Lessons</p>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon">
+                                <i class="fas fa-fire-alt"></i>
+                            </div>
+                            <p>7-Day Streak</p>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <p>25 Chats</p>
+                        </div>
+                        <div class="badge">
+                            <div class="badge-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <p>10 Lessons</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="leaderboard-section">
+                    <h3><i class="fas fa-crown"></i> Leaderboard</h3>
+                    <div class="leaderboard">
+                        <div class="leaderboard-item gold">
+                            <div class="rank">1</div>
+                            <div class="user-avatar">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/user-avatar.jpg-ZLgxbA78cQsPQYH1AACzexODM64bHY.jpeg" alt="User Avatar">
+                            </div>
+                            <div class="user-info">
+                                <p class="user-name">Sarah J.</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                            <div class="points">950 pts</div>
+                        </div>
+                        <div class="leaderboard-item silver">
+                            <div class="rank">2</div>
+                            <div class="user-avatar">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/user-avatar.jpg-ZLgxbA78cQsPQYH1AACzexODM64bHY.jpeg" alt="User Avatar">
+                            </div>
+                            <div class="user-info">
+                                <p class="user-name">You</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 82%"></div>
+                                </div>
+                            </div>
+                            <div class="points">820 pts</div>
+                        </div>
+                        <div class="leaderboard-item bronze">
+                            <div class="rank">3</div>
+                            <div class="user-avatar">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/user-avatar.jpg-ZLgxbA78cQsPQYH1AACzexODM64bHY.jpeg" alt="User Avatar">
+                            </div>
+                            <div class="user-info">
+                                <p class="user-name">Alex M.</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 78%"></div>
+                                </div>
+                            </div>
+                            <div class="points">780 pts</div>
+                        </div>
+                        <div class="leaderboard-item">
+                            <div class="rank">4</div>
+                            <div class="user-avatar">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/user-avatar.jpg-ZLgxbA78cQsPQYH1AACzexODM64bHY.jpeg" alt="User Avatar">
+                            </div>
+                            <div class="user-info">
+                                <p class="user-name">Jamie T.</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 65%"></div>
+                                </div>
+                            </div>
+                            <div class="points">650 pts</div>
+                        </div>
+                        <div class="leaderboard-item">
+                            <div class="rank">5</div>
+                            <div class="user-avatar">
+                                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/user-avatar.jpg-ZLgxbA78cQsPQYH1AACzexODM64bHY.jpeg" alt="User Avatar">
+                            </div>
+                            <div class="user-info">
+                                <p class="user-name">Taylor R.</p>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="points">600 pts</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TalkEase Language Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <audio id="message-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3"></audio>
+    <audio id="notification-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-notification-951.mp3"></audio>
+
+    <script src="js/common.js"></script>
+    <script src="js/progress.js"></script>
+</body>
+</html>

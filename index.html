@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TalkEase - Language Learning App</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-language"></i> TalkEase
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="chat.html"><i class="fas fa-comment-dots"></i> Chatbot</a></li>
+                    <li><a href="lesson.html"><i class="fas fa-book"></i> Lesson Generator</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                    <li><a href="progress.html"><i class="fas fa-trophy"></i> Progress</a></li>
+                    <li><a href="login.html" id="login-nav"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="hero">
+                <h1>Welcome to TalkEase</h1>
+                <p class="subtitle">Your AI-powered language learning companion</p>
+                <div class="feature-cards">
+                    <div class="feature-card" data-target="chat">
+                        <i class="fas fa-comment-dots"></i>
+                        <h3>AI Chatbot</h3>
+                        <p>Practice conversations with our intelligent language tutor</p>
+                        <a href="chat.html" class="btn-primary">Start Chat</a>
+                    </div>
+                    <div class="feature-card" data-target="lesson">
+                        <i class="fas fa-book"></i>
+                        <h3>Lesson Generator</h3>
+                        <p>Create custom lessons tailored to your interests</p>
+                        <a href="lesson.html" class="btn-primary">Generate Lesson</a>
+                    </div>
+                    <div class="feature-card" data-target="quiz">
+                        <i class="fas fa-question-circle"></i>
+                        <h3>Language Quiz</h3>
+                        <p>Test your knowledge with interactive quizzes</p>
+                        <a href="quiz.html" class="btn-primary">Take Quiz</a>
+                    </div>
+                    <div class="feature-card" data-target="progress">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Track Progress</h3>
+                        <p>Monitor your learning journey and earn badges</p>
+                        <a href="progress.html" class="btn-primary">View Progress</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TalkEase Language Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <audio id="message-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3"></audio>
+    <audio id="notification-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-notification-951.mp3"></audio>
+
+    <script src="js/common.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

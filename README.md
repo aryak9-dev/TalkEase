@@ -1,2 +1,1 @@
 # TalkEase
-Language learning chatbot

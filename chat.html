@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" class="light-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot - TalkEase</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-language"></i> TalkEase</a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="chat.html" class="active"><i class="fas fa-comment-dots"></i> Chatbot</a></li>
+                    <li><a href="lesson.html"><i class="fas fa-book"></i> Lesson Generator</a></li>
+                    <li><a href="quiz.html"><i class="fas fa-question-circle"></i> Quiz</a></li>
+                    <li><a href="progress.html"><i class="fas fa-trophy"></i> Progress</a></li>
+                    <li><a href="login.html" id="login-nav"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                </ul>
+            </nav>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="chat" class="section active">
+            <h2><i class="fas fa-comment-dots"></i> Language Practice Chatbot</h2>
+            <div class="chat-container">
+                <div id="chat-box">
+                    <!-- Messages will be dynamically inserted here -->
+                </div>
+                <div id="typing-indicator" class="hidden">
+                    <div class="avatar">
+                        <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bot-avatar.jpg-ZJd6kTjzi2T9wNduoG1Mc6Gl6ykmhU.jpeg" alt="Bot Avatar">
+                    </div>
+                    <div class="typing">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="chat-input-container">
+                    <button id="voice-input-btn" title="Voice Input">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                    <input type="text" id="chat-input" placeholder="Type a message...">
+                    <button id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <button id="text-to-speech-btn" title="Text to Speech">
+                        <i class="fas fa-volume-up"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 TalkEase Language Learning. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Notification Toast -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <audio id="message-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-software-interface-start-2574.mp3"></audio>
+    <audio id="notification-sound" src="https://assets.mixkit.co/sfx/preview/mixkit-positive-notification-951.mp3"></audio>
+
+    <script src="js/common.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
