@@ -1,0 +1,351 @@
+/* Lesson Generator Styles */
+.lesson-form {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  background: var(--card-bg);
+  padding: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s ease;
+}
+
+.lesson-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px var(--shadow-color);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 1rem;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input[type="text"]:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.2);
+}
+
+.generate-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+.generate-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary-color), var(--primary-color));
+  transition: left 0.3s ease;
+  z-index: 0;
+}
+
+.generate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+}
+
+.generate-btn:hover::before {
+  left: 0;
+}
+
+.generate-btn:active {
+  transform: translateY(1px);
+}
+
+.generate-btn .btn-text,
+.generate-btn .spinner {
+  position: relative;
+  z-index: 1;
+}
+
+.lesson-card {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  box-shadow: 0 10px 30px var(--shadow-color);
+  overflow: hidden;
+  margin-top: 30px;
+  animation: fadeIn 0.5s ease;
+  border: 1px solid var(--border-color);
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.lesson-card:hover {
+  transform: rotateY(5deg);
+  box-shadow: 0 15px 40px var(--shadow-color);
+}
+
+.lesson-header {
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lesson-header h3 {
+  margin: 0;
+  color: white;
+  font-weight: 600;
+}
+
+.lesson-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.lesson-actions button {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lesson-actions button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.lesson-actions button:active {
+  transform: scale(0.95);
+}
+
+.lesson-content {
+  padding: 25px;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Markdown styling */
+.lesson-content h1,
+.lesson-content h2,
+.lesson-content h3,
+.lesson-content h4 {
+  color: var(--primary-color);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.lesson-content h1 {
+  font-size: 1.8rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.lesson-content h2 {
+  font-size: 1.5rem;
+}
+
+.lesson-content h3 {
+  font-size: 1.3rem;
+}
+
+.lesson-content h4 {
+  font-size: 1.1rem;
+}
+
+.lesson-content p {
+  margin-bottom: 15px;
+}
+
+.lesson-content ul,
+.lesson-content ol {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.lesson-content li {
+  margin-bottom: 8px;
+}
+
+.lesson-content em {
+  color: var(--secondary-color);
+  font-style: italic;
+}
+
+.lesson-content strong {
+  font-weight: 600;
+}
+
+.lesson-content code {
+  background: var(--bg-color);
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.9em;
+}
+
+.lesson-content blockquote {
+  border-left: 3px solid var(--primary-color);
+  padding-left: 15px;
+  margin-left: 0;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* Share Modal */
+.share-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: fadeIn 0.3s ease;
+}
+
+.share-modal {
+  background: var(--card-bg);
+  border-radius: var(--border-radius);
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.share-modal h4 {
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-align: center;
+}
+
+.share-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.share-btn:active {
+  transform: translateY(1px);
+}
+
+.share-btn.facebook {
+  background: #3b5998;
+}
+
+.share-btn.twitter {
+  background: #1da1f2;
+}
+
+.share-btn.whatsapp {
+  background: #25d366;
+}
+
+.share-btn.email {
+  background: #ea4335;
+}
+
+.close-share {
+  width: 100%;
+  padding: 12px;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-share:hover {
+  background: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.close-share:active {
+  transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .lesson-form {
+    padding: 20px;
+  }
+
+  .share-buttons {
+    grid-template-columns: 1fr;
+  }
+}
